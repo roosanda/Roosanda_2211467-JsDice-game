@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+h2,
+p {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h3 {
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+main {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass {
+  background: white;
+  height: 30%;
+  width: 70%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  display: flex;
+  overflow: auto;
+}
+.circle1,
+.circle2,
+.circle3,
+.circle4 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  top: 5%;
+  right: 15%;
+}
+.circle2 {
+  bottom: 5%;
+  left: 7%;
+}
+.circle3 {
+  bottom: 4%;
+  left: 72%;
+}
+.circle4 {
+   top: 2%;
+   right: 72%;
+}
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  width: 10%;
+}
+.link {
+  display: flex;
+  margin: 2rem 0rem;
+  padding: 1rem 5rem;
+  align-items: center;
+}
+.link h2 {
+  padding: 0rem 2rem;
+}
+
+.games {
+  flex: 2;
+}
+
+.pro {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  border-radius: 40px;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.pro img {
+  position: absolute;
+  top: -10%;
+  right: 10%;
+}
+.pro h2 {
+  width: 40%;
+  color: white;
+  font-weight: 600;
+}
+
+
+.status {
+  margin-bottom: 40rem;
+}
+
+.status input {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: none;
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.games {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+/*The game*/
+
+.gameBox {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  width: 70%; 
+  position: absolute;
+  top: 60%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  padding: 20px;
+  backdrop-filter: blur(2rem);
+}
+
+
+
+.player {
+  font-size: 43px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+
+.currentScoreBox {
+  background: linear-gradient(
+    to right bottom,
+    rgba(211, 210, 210, 0.452),
+    rgba(255, 255, 255, 0)
+  );
+  display: inline-block;
+  padding: 35px;
+  border-radius: 10px;
+}
+
+ 
+ 
+.currentScoreBox .currentScore {
+  font-size: 35px;
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #1766ce;
+}
+
+
+.btn-save {
+  position: relative;
+  bottom: 16%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 0.7s;
+} 
+
+
+.btn-roll {
+  position: fixed;
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 0.7s;
+}
+
+
+.btn-play,
+.btn-roll,
+.btn-save {
+  background: #426696;
+  color: #fff;
+}
+
+.btn-play:hover,
+.btn-roll:hover,
+.btn-save:hover {
+  background: #42669677;
+  color: #fff;
+}
+
+.btn-play {
+  animation: animation 2s linear infinite;
+}
+
+.btn-roll,
+.btn-save {
+  opacity: 0;
+}
+
+  
+@keyframes animation
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(7, 172, 248, 0.75);
+     }
+
+     50% {
+          box-shadow: 0 0 0 25px rgba(7, 248, 248, 0.15);
+     }
+
+     100% {
+          box-shadow: 0 0 0 50px rgba(7, 91, 248, 0);
+     }
+}
+
+
+.loading,
+  .dice {
+  mix-blend-mode: soft-light;
+  }
+  
+  .dice {
+    width: 52%;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.85;
+  }
+
+  #dice1 {
+    margin-bottom: 60px;
+  }
+
+  label {
+    color: #1766ce;
+    font-weight: 100;
+    font-size: medium;
+  }
+
+  .win-image {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.55;
+    width: 30%;
+    display: none;
+  }
